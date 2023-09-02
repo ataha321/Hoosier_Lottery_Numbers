@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoosier Lottery Numbers</title>
+</head>
+<body>
+    <div>
+        <h3 class="numberList"></h3>
+        <div class="number"></div>
+    </div>
+    <div>
+        <h3 class="numberListOne"></h3>
+        <div class="numberOne"></div>
+    </div>    
+</body>
+<script>
+    // For Loop
+    let divNumber = document.querySelector (".number");
+    let heading = document.querySelector(".numberList");
+
+    heading.textContent = "For Loop - Hoosier Lottery Numbers";
+
+    let productStr = "";
+
+    for (count = 1; count <=6; count ++){
+        let randomNum = Math.floor(Math.random() * 50) + 1;
+        productStr += `Lottery number ${count} is: ${randomNum}<br>`;
+    }
+    divNumber.innerHTML = productStr;
+    console.log(randomNum);
+</script>
+<script>
+    // //While Loop
+    let divNumberOne = document.querySelector (".numberOne");
+    let headingOne = document.querySelector(".numberListOne");
+
+    headingOne.textContent = "While Loop - Hoosier Lottery Numbers";
+
+    let productStrOne = "";
+
+    let i = 0
+    while (i <= 5){
+        i++;
+        let randomNumOne = Math.floor(Math.random() * 50) + 1;
+        productStrOne += `Lottery number ${i} is: ${randomNumOne}<br>`;
+    }
+    divNumberOne.innerHTML = productStrOne;
+    console.log(i);
+    console.log(randomNumOne);
+</script>
+</html>
